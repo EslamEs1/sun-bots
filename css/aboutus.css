@@ -1,0 +1,215 @@
+/* Made By => Eslam Essam  */
+/* Start Variables */
+:root {
+    --main-color: rgb(241, 130, 59);
+    --second-color: #fc853b;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --section-background: #ececec;
+}
+
+/* End Variables */
+
+/* Start Global Rules */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    text-transform: capitalize;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Start min title */
+.min-title {
+    margin: 0 auto 80px;
+    width: fit-content;
+    text-align: center;
+}
+
+.min-title img {
+    height: 70px;
+}
+
+.min-title .title-text {
+    margin: -15px 0 0;
+}
+
+.min-title .title-text h3 {
+    font-size: 40px;
+}
+
+/* End min title */
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+
+/* Start Navbar  */
+.navbar {
+    background-color: white;
+    box-shadow: 0 0 5px rgb(214, 214, 214);
+}
+
+.navbar .nav-link ul li a {
+    color: rgb(100, 100, 100);
+}
+/* End Navbar */
+
+/* Start image-about */
+.image-about {
+    margin-top: 100px;
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+
+.image-about .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-about .container img {
+    max-width: 100%;
+}
+/* End image-about */
+
+/* Start about-Us */
+.about-Us {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+
+.about-Us .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 40px;
+}
+
+.about-Us .container img {
+    width: 100%;
+}
+
+.about-Us .container .box {
+}
+.about-Us .container .box h2 {
+    margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 30px;
+    color: black;
+}
+
+.about-Us .container .box p {
+    line-height: 1.9;
+    font-weight: 600;
+    color: #777;
+}
+
+.about-Us .container .box .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgb(231, 231, 231);
+}
+
+.about-Us .container .box .info .img-info img {
+    width: 200px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.about-Us .container .box .info .info_data {
+    margin: 20px;
+}
+
+.about-Us .container .box .info h3 {
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.about-Us .container .box .info p {
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .about-Us .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .about-Us .container .box h2,
+    p {
+        text-align: center;
+    }
+    .about-Us .container .box .info .img-info img {
+        width: 100px;
+    }
+
+    .about-Us .container .box .info {
+        margin: 10px 0;
+    }
+    .about-Us .container .box .info p {
+        font-size: 11px;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    .about-Us .container .box .info h3 {
+        margin-bottom: 0;
+    }
+}
+
+/* End about-Us */

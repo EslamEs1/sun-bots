@@ -1,0 +1,231 @@
+/* Made By => Eslam Essam  */
+/* Start Variables */
+:root {
+    --main-color: rgb(241, 130, 59);
+    --second-color: #fc853b;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --section-background: #ececec;
+}
+
+/* End Variables */
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+
+/* Start Navbar  */
+.navbar {
+    background-color: white;
+    box-shadow: 0 0 5px rgb(214, 214, 214);
+}
+
+.navbar .nav-link ul li a {
+    color: rgb(100, 100, 100);
+    font-weight: 600;
+}
+
+.navbar .nav-link li .active,
+.navbar .nav-link li a:hover {
+    border-bottom: 2px solid var(--main-color);
+}
+/* End Navbar */
+
+/* Start image-page */
+.image-page {
+    position: relative;
+    margin-top: 80px;
+    padding-bottom: var(--main-padding-bottom);
+}
+
+.image-page img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.image-page .cont {
+    position: relative;
+}
+
+.image-page .text {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.image-page .text p {
+    color: rgb(255, 255, 255);
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.image-page .overflay {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.3) 100%
+    );
+    width: 100%;
+    height: 99.5%;
+}
+
+@media (max-width: 768px) {
+    .image-page .text p {
+        font-size: 55px;
+    }
+
+    .image-page {
+        margin-top: 70px;
+    }
+}
+
+/* End image-page */
+
+/* Start exhibitions-page */
+
+.exhibitions-page {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+
+.exhibitions-page .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.exhibitions-page .container .box {
+    margin: 20px;
+    position: relative;
+}
+
+.exhibitions-page .container .box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f1813b6c;
+    transition: var(--main-transition);
+    opacity: 0;
+}
+
+.exhibitions-page .container .box img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.exhibitions-page .container .box .text {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    width: 70%;
+    text-align: center;
+    opacity: 0;
+    transition: var(--main-transition);
+}
+
+.exhibitions-page .container .box .text a i {
+    background-color: rgba(255, 255, 255, 0.397);
+    padding: 15px;
+    border-radius: 50%;
+    color: #fff;
+    transition: var(--main-transition);
+}
+
+.exhibitions-page .container .box .text a i:hover {
+    background-color: rgba(255, 255, 255, 0.726);
+    color: var(--main-color);
+}
+
+.exhibitions-page .container .box .text h3,
+p {
+    color: white;
+    font-weight: 700;
+    padding: 10px 0;
+}
+
+.exhibitions-page .container .box:hover.box::before,
+.box:hover.box .text {
+    opacity: 1;
+}
+
+@media (max-width: 991px) {
+    .exhibitions-page .container .box::before {
+        top: 0;
+        height: 100%;
+        opacity: 1;
+        background-color: #0000006b;
+    }
+
+    .exhibitions-page .container .box .text {
+        opacity: 1;
+    }
+}
+/* End exhibitions-page */
+
+/* ..........Start Event Page........ */
+
+/* Start Event */
+.events-page {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    margin-top: 50px;
+}
+
+.events-page .text-time {
+    width: fit-content;
+    padding: 10px;
+    background-color: var(--main-color);
+    color: white;
+}
+
+.events-page .text-time span {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.events-page .img-event{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+    gap: 40px;
+
+}
+
+.events-page .img-event img {
+    width:100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* End Event */
